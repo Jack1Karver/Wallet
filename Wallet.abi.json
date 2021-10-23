@@ -1,0 +1,91 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createToken",
+			"inputs": [
+				{"name":"mark","type":"string"},
+				{"name":"model","type":"string"},
+				{"name":"horsePower","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "putUpForSale",
+			"inputs": [
+				{"name":"key","type":"uint256"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getCars",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"mark","type":"string"},{"name":"model","type":"string"},{"name":"horsePower","type":"uint256"},{"name":"price","type":"uint256"}],"name":"value0","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getCar",
+			"inputs": [
+				{"name":"key","type":"uint256"}
+			],
+			"outputs": [
+				{"components":[{"name":"mark","type":"string"},{"name":"model","type":"string"},{"name":"horsePower","type":"uint256"},{"name":"price","type":"uint256"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "sendTransactionInCommision",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendTransactionOutComission",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendFullAndDestroy",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"mark","type":"string"},{"name":"model","type":"string"},{"name":"horsePower","type":"uint256"},{"name":"price","type":"uint256"}],"name":"cars","type":"tuple[]"},
+		{"name":"carToOwner","type":"map(uint256,uint256)"}
+	]
+}
